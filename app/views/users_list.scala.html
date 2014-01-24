@@ -10,8 +10,7 @@
                 @form(routes.UserController.delete(user.getId())){  
                 <input type="submit" value="Delete" name="deleteUser"></input> 
                 }
-                @form(routes.UserController.userUpdate(user.getId())){  
-                <input type="hidden" value="@user.getId()" name="id"></input> 
+                @form(routes.UserController.userUpdate(user.getId())){
                 <input type="submit" value="Update"></input> 
                 }
                  
