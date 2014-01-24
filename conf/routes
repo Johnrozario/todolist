@@ -12,7 +12,7 @@ GET     /assets/*file               controllers.Assets.at(path="/public", file)
 GET 	/registration				controllers.UserController.create()
 POST 	/registration				controllers.UserController.save()
 
-GET	/user/update/:id				controllers.UserController.userUpdate(id:Long)
+GET	/user/:id/update/				controllers.UserController.userUpdate(id:Long)
 POST	/user/update				controllers.UserController.update()
 
 GET		/users						controllers.UserController.all()
