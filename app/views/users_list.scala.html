@@ -1,0 +1,21 @@
+@(users:List[User])
+@import helper._
+    @main("Todo list") {
+    <h1>@users.size() user(s)</h1>
+    
+    <ul id="userList">
+        @for(user <- users) {
+            <li>
+                @user.getFullName()   @user.getPassword()   
+                @form(routes.UserController.delete(user.getId())){  
+                <input type="submit" value="Delete" name="deleteUser"></input> 
+                }
+                @form(routes.UserController.userUpdate(user.getId())){  
+                <input type="hidden" value="@user.getId()" name="id"></input> 
+                <input type="submit" value="Update"></input> 
+                }
+                 
+            </li>
+        }
+    </ul>
+    }
